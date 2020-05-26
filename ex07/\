@@ -1,0 +1,14 @@
+import string
+from sys import argv
+
+if (len(argv) == 3):
+	try:
+		numb = int(argv[2])
+		if (len(argv[1]) <= numb):
+			print('ERROR')
+			exit()
+		print('ok')
+	except:
+		print('ERROR')
+else:
+	print('ERROR')
