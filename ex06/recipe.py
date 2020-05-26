@@ -68,7 +68,12 @@ def menu():
         print("3: Print a recipe")
         print("4: Print the cookbook")
         print("5: Quit")
-        choice = int(input())
+        try:
+            choice = int(input())
+        except:
+            dernph = "please type the corresponding number."
+            print("This option does not exist, " + dernph)
+            print("To exit, enter 5.")
         if choice == 1:
             print("Please provide recipe name")
             name = input()
@@ -97,6 +102,7 @@ def menu():
             dernph = "please type the corresponding number."
             print("This option does not exist, " + dernph)
             print("To exit, enter 5.")
+
 
 
 menu()

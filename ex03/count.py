@@ -29,7 +29,7 @@ def prog(phrase):
             espace += 1
         elif x in string.punctuation:
             point += 1
-    inc += 1
+        inc += 1
     print("The text contains " + str(inc) + " characters:\n")
     print(str(upper) + " upper letters\n")
     print(str(lower) + " lower letters\n")

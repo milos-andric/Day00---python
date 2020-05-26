@@ -27,7 +27,7 @@ if ((len(argv) == 3) and (errored == 0)):
         print("Product:\t" + str(product))
         print("Quotient:\t" + str(div))
         print("Remainder:\t" + str(mod))
-    except valueError:
+    except ValueError:
         errored = 1
         msg_error1 = "InputError: only numbers\n\n"
 

@@ -2,7 +2,7 @@ from sys import argv
 
 if len(argv) > 2:
     print("ERROR")
-else:
+elif len(argv) == 2:
     try:
         number = int(argv[1])
         if number == 0:
