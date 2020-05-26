@@ -1,16 +1,16 @@
 cookbook = {
     'sandwich': {
-        'ingredients': {'ham', 'bread', 'cheese', 'tomatoes'},
+        'ingredients': ['ham', 'bread', 'cheese', 'tomatoes'],
         'meal': 'lunch',
         'prep_time': 10
         },
     'cake': {
-        'ingredients': {'flour', 'sugar', 'eggs'},
+        'ingredients': ['flour', 'sugar', 'eggs'],
         'meal': 'dessert',
         'prep_time': 60
     },
     'salad': {
-        'ingredients': {'avocado', 'arugula', 'tomaotes', 'spinach'},
+        'ingredients': ['avocado', 'arugula', 'tomaotes', 'spinach'],
         'meal': 'lunch',
         'prep_time': 15
     }
@@ -53,6 +53,13 @@ def add_recipe(name, meal, prep, ing):
     cookbook.update(d)
 
 
+def get_list(phrase):
+    phrase = phrase.replace(' ', '')
+    phrase = phrase.split(',')
+    print(phrase)
+    return(phrase)
+
+
 def menu():
     while 1:
         print("Please select an option by typing the corresponding number:")
@@ -67,6 +74,7 @@ def menu():
             name = input()
             print("Please provide ingredients seperated by commas")
             ing = input()
+            ing = get_list(ing)
             print("Please provide prep time needed")
             prep = int(input())
             print("Please specify which type of meal this recipe belong to")
